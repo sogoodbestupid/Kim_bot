@@ -1,0 +1,2374 @@
+/* Additional styles */
+#adminpanel {
+	width: auto;
+}
+#toggleMenu {
+	color: #0D3774;
+	font-weight: 600;
+	line-height: 16px;
+	text-indent: 25px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#toggleMenu.active {
+	text-indent: -9999px;
+}
+#toggleMenu:hover {
+	color: #EF0032;
+}
+#ourMenu .menublock .menublock {
+	padding: 0;
+	margin: 0;
+}
+
+
+/* Responsive styles */
+@media (min-width: 993px) {
+
+	/* Fixed header for desktop */
+	.header {
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 20;
+		max-width: 1920px;
+		margin: auto;
+	}
+
+	.menuHeader {
+		width: 100%;
+		position: relative;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 20;
+		background: #FFF;
+		max-width: 1920px;
+		margin: auto;
+	}
+	.menuHeader.fixed {
+		position: fixed;
+	}
+	.closeOnOuterClick {
+		position: static;
+		top: 0;
+		z-index: 25;
+	}
+	.menuHeader.fixed + .closeOnOuterClick {
+		position: fixed;
+		top: 92px;
+	}
+	.menuHeader.fixed + .closeOnOuterClick + * {
+		margin-top: 96px;
+	}
+
+}
+/* > 993 */
+
+
+@media (max-width: 1260px) { /* Transition state */
+	.land-crumb {
+  		font-size: 13px;
+  	}
+
+	#toggleMenu {
+		left: 15px;
+		z-index: 250;
+	}
+
+	#header .visually_challenged {
+		display: none !important;
+	}
+
+}
+/* 1260 */
+
+
+@media (max-width: 1152px) { /* Transition state */
+
+	#toggleMenu {
+		text-indent: -9999px;
+	}
+
+
+	.wrapSlider {
+		max-width: 100%;
+	}
+	.bx-controls-direction .bx-prev,
+	.bx-controls-direction .bx-prev {
+		left: 0 !important;
+	}
+	.bx-controls-direction .bx-next {
+		right: 0 !important;
+	}
+	.wrapSlider .bx-controls-direction > * {
+		width: 45px !important;
+	}
+	.bx-controls-direction > .bx-prev::after {
+		left: 10px !important;
+	}
+	.bx-controls-direction > .bx-next::after {
+		left: auto !important;
+		right: 10px !important;
+	}
+	.bx-controls-direction .disabled {
+		display: none;
+	}
+
+
+	#mainslider .wrapBG .descr {
+		margin-left: 0;
+	}
+
+}
+/* 1152px */
+
+
+@media only screen and (max-width: 992px) { /* Mobile screen */
+
+	body {
+		min-width: 0 !important;
+	}
+	.inner {
+		width: auto !important;
+		max-width: 100% !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	.container-fluid .inner.row,
+	.inner .inner {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.row .row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	#middle {
+		overflow: visible;
+	}
+
+	textarea,	input {
+		-webkit-appearance: none;
+		-webkit-border-radius: 2px;
+	}
+
+	h1, .h1 {
+		font-size: 5vmin !important;
+		line-height: 0.9 !important;
+	}
+	.seo-footer h1 {
+		font-size: 100% !important;
+	}
+	h4 {
+		width: auto !important;
+	}
+
+	a {
+		outline: 0 !important;
+	}
+
+
+	/* Hidden blocks */
+	#dragHistory,
+	.licenze .catalog,
+	.footer a.level2,
+	.footer .menublock::before,
+	.footer .ik_select,
+	#mainslider .descr-bottom > *,
+	#mainslider .wrapBG .descr span + div,
+	.aboutUniversity .dwlLink,
+	.wrapSlider + .f3.ovrflhdn,
+	#levelEducation,
+	#show_rgn-map,
+	.menuHeader {
+		display: none !important;
+	}
+
+	#mainslider .descr-bottom {
+		display: block !important;
+	}
+	#mainslider .descr-bottom-btn {
+		display: block !important;
+	}
+	#mainslider .wrapBG .descr-bottom-btn span.btn {
+		margin: 0 !important;
+		line-height: 44px !important;
+	}
+
+
+	/* Blocks */
+	.inner img {
+		max-width: 100%;
+		height: auto;
+	}
+	iframe {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+
+	.closeOnOuterClick {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		overflow-y: scroll;
+	}
+	.forToggleMenuLink {
+		position: absolute;
+		top: -88px;
+		z-index: 300;
+	}
+	body.is-menu-opened {
+		overflow-y: hidden;
+	}
+	body.ovrflhdn #toggleMenu {
+		position: absolute;
+	}
+	body.is-menu-opened #toggleMenu {
+		position: fixed;
+		top: 28px;
+	}
+
+	#ourMenu {
+		width: auto !important;
+		position: relative;
+		bottom: auto;
+		z-index: 200;
+	}
+	#ourMenu .menublock.contact,
+	#ourMenu {
+		padding: 2px 15px 0 46px;
+	}
+	#ourMenu .innerOurMenu {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	#ourMenu .innerOurMenu > .menublock {
+		-webkit-order: 2;
+		order: 2;
+	}
+	#ourMenu .innerOurMenu .menublock {
+		width: 222px !important;
+		max-width: 100% !important;
+		padding: 0;
+		margin-right: 18px;
+	}
+	#ourMenu .innerOurMenu .menublock .menublock {
+		margin-right: 18px;
+	}
+
+
+	#ourMenu .menublock.right {
+		width: 100% !important;
+		-webkit-order: 1;
+		order: 1;
+		float: none;
+		padding-left: 0;
+		margin-left: 0;
+		border: 0;
+	}
+	#ourMenu .menublock.right span[class] {
+		border: 0;
+		padding: 0;
+		margin: 0;
+	}
+	#ourMenu .menublock.right a.level1 {
+		margin-bottom: 0;
+	}
+
+	#ourMenu .bottomMenuBlock {
+		-webkit-order: 3;
+		order: 3;
+		-webkit-align-self: flex-end;
+		align-self: flex-end;
+		padding: 20px 0 10px;
+		margin: 0;
+	}
+
+	#ourMenu .menublock.contact {
+		width: auto;
+		position: static;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding-top: 20px;
+		padding-bottom: 0;
+		margin: 15px -15px 0 -46px;
+	}
+	#ourMenu .menublock.contact > div {
+		height: auto;
+		border-left: 0;
+		border-right: 1px solid #D1D1D1;
+		padding: 0 20px 0 0 !important;
+		margin: 0 20px 20px 0 !important;
+	}
+	#ourMenu .menublock.contact .c4 {
+		border: 0;
+		padding-right: 0 !important;
+		margin-right: 0 !important;
+	}
+	#ourMenu .phone-label {
+		display: block;
+		color: #A6A6A6;
+		font-size: 10px;
+		font-weight: normal;
+	}
+	#ourMenu .menublock.contact .phone a {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
+	.header {
+		height: auto !important;
+		overflow: hidden;
+		text-align: right;
+		padding: 14px 0 7px;
+	}
+	.header .logo {
+		width: 140px;
+		height: 40px;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		margin: 5px 0 0 30px;
+	}
+	.logo svg {
+		max-width: 249px;
+		height: auto !important;
+	}
+	.header .logo #logotype g.logo-color:nth-of-type(3) + path,
+	.header .logo #logotype g.logo-color:nth-of-type(3) {
+		display: none;
+	}
+	#header .phone {
+		float: none;
+		margin: 0;
+	}
+
+
+	#adminpanel {
+		top: 100px;
+	}
+
+
+	.bx-pager {
+		position: relative;
+		text-align: center !important;
+	}
+	.bx-controls-direction > * {
+		height: auto;
+		top: 50%;
+	}
+
+
+	#mainslider .wrapBG {
+		height: 256px !important;
+		background-size: cover !important;
+	}
+	#mainslider .wrapBG a {
+		left: 0 !important;
+	}
+	#mainslider .wrapBG .descr {
+		padding-top: 102px !important;
+		width: auto !important;
+		left: 45px !important;
+		right: 45px !important;
+		line-height: 1 !important;
+	}
+	#mainslider .title {
+		font-size: 43px !important;
+	}
+	#mainslider .title span {
+		font-size: 29px !important;
+	}
+	#mainslider .descr-bottom span.btn {
+		height: 36px;
+		line-height: 36px !important;
+		font-size: 12px !important;
+	}
+
+
+	.BGallery {
+		padding-bottom: 0 !important;
+	}
+	.BGallery .inner {
+		overflow: hidden;
+	}
+	.BGallery .h3 {
+		margin-top: 0 !important;
+	}
+	.BGallery .bx-viewport,
+	.BGallery .bx-wrapper {
+		height: auto !important;
+	}
+	.BGallery .bx-viewport {
+		min-height: 420px;
+	}
+	body #bigGallery .wrapBG {
+		width: auto !important;
+	}
+	#bigGallery .wrapBG .innerBG.fat + .innerBG + .innerBG.fat,
+	#bigGallery .wrapBG .innerBG.fat + .innerBG.fat {
+		clear: left;
+	}
+	.gallery-view img {
+		width: 100% !important;
+	}
+
+
+	.popularProgramm #slideProgramm {
+		width: auto !important;
+		margin: 0 0 0 -20px !important;
+	}
+	.popularProgramm .bx-viewport {
+		height: auto !important;
+	}
+	.popularProgramm .wrap a {
+		width: 33.3% !important;
+		height: 120px !important;
+		float: left !important;
+		clear: none !important;
+		box-sizing: border-box;
+		border-left: 20px solid transparent;
+		background-position: 0 0 !important;
+		margin: 10px 0 !important;
+	}
+	.popularProgramm .wrap a:first-child {
+		height: 260px !important;
+	}
+	.popularProgramm .bx-pager {
+		margin-left: 20px;
+	}
+
+	.form {
+		padding: 15px 15px 15px !important;
+	}
+	#anketaForm.form {
+		padding: 0 !important;
+	}
+	.form .h3 {
+		display: block;
+		margin-bottom: 15px !important;
+	}
+	.form-wrap form p,
+	.form p {
+		margin-bottom: 10px !important;
+	}
+	.form p.right {
+		float: left;
+	}
+	.form p.submit + div {
+		margin: 0 !important;
+	}
+	.form input[type="text"],
+	.form textarea {
+		min-height: 45px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	.hiddenForm.advantage .notice {
+		top: 0 !important;
+		text-align: left !important;
+	}
+
+
+	.education {
+		width: auto !important;
+		float: none;
+	}
+	.education .h3 {
+		margin-top: 10px !important;
+	}
+	.education .item {
+		width: auto !important;
+		display: block !important;
+		float: none !important;
+	}
+
+
+	.reviews {
+		float: none;
+	}
+	.reviews .review .img {
+		position: relative;
+	}
+	.reviews .review .img a .play {
+		top: auto !important;
+		left: auto !important;
+		right: 10px;
+		bottom: 30px;
+	}
+
+
+	#videolist {
+		width: auto !important;
+		padding: 15px !important;
+	}
+	.video .h3 .youtube {
+		position: static !important;
+	}
+	.video > div {
+		height: auto !important;
+		float: none !important;
+	}
+	#syntv-efir {
+		padding: 0 15px !important;
+	}
+	.eagleplayer {
+		width: 100% !important;
+	}
+	#player-control,
+	.eagleplayer {
+		max-width: 355px !important;
+	}
+	#player-control {
+		left: 30px !important;
+		bottom: -10px !important;
+	}
+	.wrap-video-youtube {
+		width: auto !important;
+		padding: 15px !important;
+		margin: 0 !important;
+	}
+	#video-youtube span,
+	#video-youtube {
+		display: block !important;
+	}
+	#video-youtube span {
+		padding: 0 0 5px;
+	}
+
+
+	.news {
+		float: none !important;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	.news-anounce-separator::after {
+		position: static !important;
+	}
+	.anounce {
+		width: auto !important;
+		float: none !important;
+	}
+
+
+	.footer {
+		line-height: 1;
+		padding-top: 20px;
+	}
+	.footerWrap {
+		width: auto;
+		overflow: visible;
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+	.footer .bottommenu {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		padding-right: 180px;
+	}
+	.footer .menublock {
+		width: 170px;
+		max-width: 100%;
+		-webkit-order: 1;
+		order: 1;
+		padding-left: 0;
+		padding: 0 15px 15px 0 !important;
+		margin: 15px 0 0 !important;
+	}
+	.footer .menublock:first-child {
+		-webkit-order: 2;
+		order: 2;
+		margin: 0;
+	}
+	.footer .menublock.contact {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.footer .inner:after,
+	.footerWrap:after {
+		content: '';
+		clear: both;
+	}
+	#footer .block.c4 {
+		margin-top: 30px;
+	}
+	.footer .phone {
+		float: right !important;
+	}
+
+
+
+	#content.schedule > .left {
+		float: none;
+	}
+
+	#content.schedule .params{
+		height: auto;
+		border: 0;
+		padding: 0;
+	}
+	#content.schedule .params .category {
+		width: auto;
+	}
+
+	#content.schedule .sheduleSelectWrap {
+		width: auto;
+		height: auto;
+		position: static;
+		border: 0;
+		padding: 5px;
+	}
+	.sheduleSelectWrap span.who {
+		margin-right: 5px;
+	}
+	#content.schedule .ik_select.sheduleSelect {
+		top: 0;
+	}
+
+	.schedule .result {
+		clear: both;
+		overflow: hidden;
+	}
+	.schedule .result p,
+	.schedule .result h5,
+	.schedule .result h4 {
+		margin-bottom: 10px;
+	}
+
+	table.scheldueTable {
+		margin-bottom: 20px;
+	}
+	table.scheldueTable th,
+	table.scheldueTable td {
+		width: auto;
+		padding: 5px;
+	}
+	table.scheldueTable th.schedule-date,
+	table.scheldueTable td.hasDate {
+		width: auto;
+		padding-left: 5px;
+	}
+
+
+	#scroll_top {
+		right: 0;
+		bottom: 0;
+	}
+
+
+	.fancybox-type-iframe,
+	.fancybox-type-iframe .fancybox-inner {
+		width: 100% !important;
+		height: auto !important;
+		left: auto !important;
+	}
+	.fancybox-type-iframe iframe {
+		height: 400px;
+	}
+
+
+	/* Land pages */
+	.blueBig {
+		height: auto;
+	}
+	.inline-t {
+		height: auto;
+		overflow: visible;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.blueBig span.t {
+		display: inline-block;
+		float: none !important;
+		text-align: left;
+		vertical-align: top;
+		margin: 0 20px !important;
+	}
+
+	.promoFeatures {
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+	.promoSpecialty {
+		clear: both;
+		padding-top: 30px !important;
+	}
+	.promoSpecialty h3 {
+		text-align: left !important;
+	}
+	.promoSpecialtyContent {
+		margin-bottom: 0 !important;
+	}
+	.promoSpecialtyRow {
+		margin: 0 !important;
+	}
+	.promoSpecialtyCol {
+		width: 100% !important;
+		max-width: 300px;
+		padding-left: 0 !important;
+	}
+	.promoSpecialtyItem .menu li > * {
+		margin-right: 20px !important;
+	}
+
+
+	.top::before {
+		background-position: 60% 0 !important;
+	}
+	.top h1 {
+		margin-top: 10px !important;
+	}
+	.top .faculty {
+		width: auto !important;
+	}
+
+
+	.teacher .person .bg {
+		height: auto !important;
+	}
+	.teacher .person h4 {
+		font-size: 1.8em !important;
+	}
+	.teacher .text .item .td {
+		padding: 10px 0;
+	}
+
+
+	.hiddenForm .wrapForm {
+		width: auto !important;
+		min-width: auto !important;
+	}
+	.hiddenForm .inner .text {
+		width: auto !important;
+		height: auto !important;
+		padding: 20px !important;
+	}
+	.hiddenForm .inner > img {
+		display: none;
+	}
+
+
+	.btn {
+		width: auto !important;
+		display: inline-block !important;
+		background-image: none !important;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+
+	.promo-halfimgtext {
+		height: auto;
+		min-height: 700px;
+		background-size: cover;
+	}
+	.promo-halfimgtext .second {
+		padding: 15px !important;
+	}
+	.promo-halfimgtext .second .btn {
+		position: static !important;
+	}
+	.promo-halfimgtext .first-icons {
+		margin-bottom: 20px !important;
+	}
+
+	.syllabus .item {
+		padding-left: 20px !important;
+	}
+	.syllabus .toggle_id {
+		height: auto !important;
+		min-height: 78px !important;
+		padding-top: 5px !important;
+	}
+	.syllabus .toggle_id span {
+		vertical-align: middle;
+	}
+	.syllabus .item::before {
+		top: 50% !important;
+		margin-top: -5px;
+	}
+
+
+	.promoBanner {
+		height: auto !important;
+		padding: 15px !important;
+	}
+	.promoBannerText,
+	.promoBanner,
+	.promoBannerTitle,
+	.promoBannerNav ul {
+		width: auto !important;
+		min-width: 0 !important;
+	}
+	.promoBannerImg img {
+		width: auto !important;
+		min-height: 100%;
+	}
+	.promoBannerTitle {
+		height: auto !important;
+		padding: 0 0 15px !important;
+	}
+	.promoBannerNav {
+		height: auto !important;
+		position: static !important;
+	}
+	.promoBannerNav .valign {
+		display: block !important;
+	}
+	.promoBannerNav ul {
+		height: auto !important;
+		display: block !important;
+		margin-left: 15px !important;
+	}
+	.promoBannerNav li {
+		min-height: 56px;
+		display: inline-block !important;
+	}
+	.promoBannerText {
+		position: relative;
+		padding: 15px 0;
+		margin: 0 !important;
+	}
+	.promoBannerNav ul::before,
+	.promoBannerNav ul::after,
+	.promoBannerNav ul li::before,
+	.promoBannerNav ul li::after,
+	.promoBannerNav ul li div::before,
+	.promoBannerNav ul li div::after {
+		display: none !important;
+	}
+
+	.formOfStudy li {
+		width: auto !important;
+		border: 0 !important;
+		padding: 0 20px !important;
+		margin: 0 0 20px !important;
+	}
+
+	.promoDocument {
+		padding: 20px 0 !important;
+		margin: 0 !important;
+	}
+	.promoDocument-caption {
+		font-size: 2em !important;
+	}
+	.promoDocument-sub-caption {
+		font-size: 1em !important;
+		line-height: 1.25 !important;
+	}
+	.promoDocument a {
+		display: inline-block !important;
+		position: static !important;
+		margin: 20px 20px 0 0 !important;
+	}
+	.promoDocument .imgs {
+		float: none !important;
+		clear: both !important;
+		margin-top: 10px !important;
+	}
+	.promoDocument img {
+		float: none !important;
+		margin: 0 !important;
+	}
+
+
+	.promoHalfImgText {
+	}
+	.promoHalfImgText .w50 {
+		width: auto !important;
+		height: auto !important;
+		float: none;
+		padding: 0 15px !important;
+		box-sizing: border-box;
+	}
+	.promoHalfImgText .first {
+		padding-bottom: 15px !important;
+	}
+	.promoHalfImgText .second {
+		padding-top: 15px !important;
+	}
+	#mba .promoHalfImgText .first span {
+		position: static !important;
+		font-size: 2em !important;
+	}
+	#mba .promoHalfImgText .second ul {
+		width: auto !important;
+		margin: 0 !important;
+	}
+
+
+	.head_descr {
+		margin: 30px auto !important;
+	}
+	.head_descr .menu > a,
+	.head_descr .menu.right,
+	.head_descr .text,
+	.head_descr .text-content {
+		width: auto !important;
+		float: none !important;
+		clear: both;
+	}
+	.head_descr .menu.right {
+		border: 0 !important;
+		padding: 20px 0 !important;
+		margin: 0 !important;
+	}
+	.head_descr .text a.showForm {
+		min-height: 110px;
+		display: inline-block;
+		box-sizing: border-box;
+		float: none !important;
+		background-size: cover;
+		vertical-align: top;
+		margin: 0 10px 15px 0 !important;
+	}
+	.head_descr .text a.btn {
+		min-height: 0 !important;
+	}
+	.head_descr h4 {
+		margin: 0 0 10px !important;
+	}
+
+
+	.findEdu .text {
+		margin: 10px 0 0 !important;
+	}
+	.findEdu .block {
+		width: 100% !important;
+		max-width: 258px;
+		display: inline-block;
+		float: none !important;
+		vertical-align: top;
+		padding: 0 !important;
+		margin: 0 30px 0 10px !important;
+	}
+	.findEdu .block.first::after {
+		display: none;
+	}
+	.findEdu .block.second {
+		margin-bottom: 20px !important;
+	}
+
+
+	.howToGo {
+		background-size: cover;
+	}
+	.howToGo::before {
+		display: none;
+	}
+	.howToGo .wrapSteps::after {
+		display: none;
+	}
+
+
+	.advantages {
+		height: auto !important;
+	}
+	.advantages a {
+		width: 100% !important;
+		max-width: 317px !important;
+		float: left;
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		vertical-align: top;
+	}
+	.advantages a.medium {
+		height: 295px !important;
+	}
+	.advantages .column {
+		height: auto !important;
+	}
+	.advantages .column .h50 {
+		height: 100% !important;
+	}
+	.advantages .column .row {
+		min-height: 350px;
+		margin: 0 !important;
+	}
+	.advantages .ad4 {
+		text-shadow: 0 0 20px #000;
+	}
+	.advantages .ad4 img {
+		top: 45px !important;
+	}
+
+
+	.banners.alignRigh {
+		text-align: left !important;
+	}
+	.slideArticle .hidden > p,
+	.text div.left {
+		width: auto !important;
+		float: none !important;
+	}
+
+
+	.stud_education {
+		float: none !important;
+		border: 0 !important;
+		padding: 0 !important;
+	}
+	#reviews,
+	.stud_vacancies .item,
+	.stud_vacancies {
+		width: auto !important;
+		float: none !important;
+		clear: both;
+	}
+	.stud_vacancies .item {
+		display: block !important;
+		border-top: 0 !important;
+		margin: 0 !important;
+	}
+	#reviews h3 {
+		text-align: left !important;
+	}
+	#reviews .bx-wrapper {
+		max-width: 100% !important;
+		margin: 0 !important;
+	}
+
+
+	.aboutPayment .apleft {
+		min-height: 586px;
+	}
+	.aboutPayment .apright {
+		width: auto !important;
+		float: none !important;
+		clear: both;
+	}
+	.aboutPayment .apright > a {
+		max-width: 300px;
+		float: left;
+	}
+
+
+	.biblio {
+		padding: 10px 0 0 !important;
+	}
+	.biblio div.inner {
+		background-size: cover;
+	}
+	.biblio .text {
+		height: auto !important;
+	}
+	.biblio .time {
+		margin-right: 20px;
+	}
+	.biblio .text .bluebtn {
+		float: none !important;
+		margin-bottom: 20px;
+	}
+
+
+	.administration .admlist {
+		width: auto !important;
+	}
+	.administration .admlist > * {
+		float: left !important;
+		margin-right: 20px;
+	}
+	.administration .accomodation {
+		position: static !important;
+		float: left !important;
+		padding: 0 20px !important;
+	}
+
+
+	.banner-link {
+		height: 320px !important;
+		background-size: cover;
+	}
+
+
+	.crumb {
+		height: auto !important;
+		padding: 0 0 7px !important;
+	}
+	.crumb .B_crumbBox > li > a > span,
+	.crumb .B_crumbBox > li > span {
+		max-width: none !important;
+		white-space: nowrap !important;
+	}
+	.crumb .B_crumbBox > li > a > span::after,
+	.crumb .B_crumbBox > li > span::after {
+		display: none;
+	}
+
+
+	#container {
+		float: none !important;
+	}
+	#content {
+		border: 0 !important;
+		padding: 0 !important;
+	}
+	#sideLeft {
+		width: auto !important;
+		float: none !important;
+		padding: 0 !important;
+		margin: 20px 0 0 !important;
+	}
+	#sideLeft .leftmenu li > a > img {
+		display: none !important;
+	}
+
+
+	.partners > * {
+		padding-top: 150px !important;
+	}
+	.partners > .row {
+		padding-top: 0 !important;
+	}
+
+	.vacancy-list h3 {
+		font-size: 1.7em !important;
+	}
+
+	body.second.landpage .programm .content h4 {
+		font-size: 1em !important;
+		line-height: 1.25 !important;
+	}
+
+
+	.inline-t,
+	.blueBig span.big > strong,
+	.blueBig span.big h1 {
+		margin-top: 20px !important;
+	}
+
+	.inlineFaculty {
+		width: 100% !important;
+		max-width: 240px !important;
+		margin-left: 0 !important;
+		margin-right: 15px !important;
+	}
+
+
+	.become .bg {
+		height: auto !important;
+	}
+	.become .bg .salary > span:first-child {
+		position: static !important;
+		display: block;
+		text-align: right;
+	}
+	.become .bg .salary .item i.icon-rouble {
+		margin: 0 !important;
+	}
+	.become .bg .salary .item .pull-left {
+		padding-bottom: 5px !important;
+	}
+
+
+	.promo-kemworkaut {
+		height: auto !important;
+		padding-bottom: 30px !important;
+	}
+
+
+	.inner.partners {
+		clear: both;
+	}
+
+	.program_faculty h3 {
+		height: auto !important;
+		line-height: 1.25 !important;
+		background-size: cover;
+		padding-bottom: 10px;
+	}
+
+
+	.faq-content .head_descr .menu {
+		margin-bottom: 20px !important;
+	}
+	.faq-content h3 {
+		overflow: hidden;
+	}
+	.faq-content h3 img {
+		max-width: none !important;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+
+	.our-mission {
+		text-align: center;
+	}
+	.our-mission > * {
+		display: inline-block !important;
+		float: none !important;
+		margin: 0 20px 30px !important;
+	}
+
+
+	#form.aboutUniversity {
+		height: auto !important;
+		text-align: center;
+		background-size: cover;
+	}
+	#form.aboutUniversity a.play,
+	#form.aboutUniversity span.t {
+		display: inline-block;
+		float: none !important;
+		position: relative !important;
+		text-align: left;
+		margin: 0 10px !important;
+	}
+	.aboutUniversity span.t.p2 {
+		padding-left: 85px !important;
+	}
+	.aboutUniversity span.t.p2::before {
+		left: 0 !important;
+	}
+	.aboutUniversity span.t strong {
+	}
+	.aboutUniversity .form_blue {
+		position: static !important;
+	}
+	.aboutUniversity span.big {
+		display: block !important;
+		position: static !important;
+		padding: 50px 0 20px;
+	}
+	.aboutUniversity span.big > strong {
+		font-size: 12vmin;
+		line-height: 1 !important;
+	}
+	.aboutUniversity span.big > strong + span {
+		font-size: 6vmin;
+		line-height: 1 !important;
+	}
+	.aboutUniversity span.big > .left {
+		float: none !important;
+		display: inline-block !important;
+		text-align: center;
+		vertical-align: top !important;
+		margin: 10px 15px !important;
+	}
+	.aboutUniversity span.big > .left strong,
+	.aboutUniversity span.big > .left span {
+		float: none !important;
+		display: inline-block !important;
+		vertical-align: top !important;
+	}
+	.aboutUniversity span.big > .left span {
+		text-align: left;
+	}
+	#form.aboutUniversity a.play {
+		top: auto !important;
+		margin-top: 80px !important;
+	}
+
+
+	.history {
+		padding: 20px 0 !important;
+		margin: 0 0 20px !important;
+	}
+	.history .bx-wrapper {
+		margin-top: 30px !important;
+	}
+	.history .bx-viewport {
+		left: auto !important;
+		margin-left: 0 !important;
+	}
+	.history .column {
+		width: 100% !important;
+		max-width: 320px !important;
+		box-sizing: border-box;
+	}
+	.history .bx-wrapper .bx-pager-item {
+		min-width: 40px !important;
+		display: inline-block !important;
+	}
+	.history .bx-wrapper .bx-pager-item.active {
+		font-weight: bold;
+	}
+	#history .bx-controls-direction * {
+		width: 35px !important;
+	}
+	.history .column .text .jspPane {
+		width: 100% !important;
+	}
+
+
+	div[id^='map'] {
+		width: auto !important;
+	}
+
+
+	#content .regions li {
+		width: auto !important;
+		margin-right: 10px !important;
+	}
+
+
+	.kaf_pdg-download i {
+		left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+
+	#supervisoryul li {
+		height: auto !important;
+	}
+
+
+	.vcard {
+		width: auto !important;
+		float: none !important;
+	}
+
+
+	.news-page .head_descr {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	.news-page .head_descr > .text {
+		width: 100% !important;
+		-webkit-order: 1;
+		order: 1;
+	}
+	.news-page .head_descr > .menu {
+		width: 100% !important;
+		-webkit-order: 2;
+		order: 2;
+	}
+
+	.news-item-related-img {
+		width: 90px;
+	}
+
+
+	.press_article-item-img,
+	.press_article-item-info {
+		display: block !important;
+	}
+	.press_article-item-img {
+		width: 100px !important;
+		float: left;
+	}
+
+
+	.press_announcement {
+		height: auto !important;
+		background-position: 100% 0 !important;
+		background-size: cover;
+	}
+	.press_announcement .press_caption {
+		margin: 20px 0 !important;
+	}
+	.press_announcement-left,
+	.press_announcement .first,
+	.press_announcement .first .date,
+	.press_announcement .first .title {
+		width: auto !important;
+		float: none !important;
+	}
+	.press_announcement .first .img {
+		margin: 0 15px 10px 0 !important;
+	}
+	.press_announcement .first .title {
+		margin: 0 !important;
+	}
+	.press_announcement .item {
+		float: none !important;
+		clear: both;
+		padding: 20px 0 10px !important;
+		margin: 0 !important;
+	}
+	.press_announcement .item .img {
+		display: none !important;
+	}
+	.press_announcement .item .date,
+	.press_announcement .item a {
+		float: none !important;
+		display: inline-block !important;
+		vertical-align: top !important;
+	}
+	.press_announcement .item a {
+		width: auto !important;
+	}
+	.press_announcement-all {
+		float: none !important;
+		margin-bottom: 20px !important;
+	}
+
+
+	.press_media {
+		padding: 15px 0 !important;
+	}
+	.press_media-content {
+		display: block !important;
+		margin: 15px 0 0 !important;
+	}
+	.press_media-left,
+	.press_media-center {
+		width: auto !important;
+		display: inline-block !important;
+	}
+	.press_media-right.dwlLink {
+		display: none !important;
+	}
+
+
+	.press_wp {
+		height: auto !important;
+		background-position: 60% 0 !important;
+		background-size: cover;
+	}
+	.press_wp-content {
+		padding: 20px 20px 20px 55% !important;
+	}
+
+
+	.pageList {
+		height: auto !important;
+		min-height: 38px;
+		padding: 0 40px !important;
+	}
+	.pageList li.prev,
+	.pageList li.next {
+		height: 100% !important;
+		top: 0;
+	}
+	.pageList li {
+		display: inline-block;
+		float: none !important;
+		margin-top: -1px !important;
+	}
+
+
+	.cards_shadow-list li {
+		float: none !important;
+		clear: none !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 30px 30px 0 !important;
+	}
+
+
+	body#media_about_us .item,
+	body[data-id="70"] .item {
+		padding: 10px 0 !important;
+		margin: 0 !important;
+	}
+	body#media_about_us .item-content,
+	body[data-id="70"] .item-content {
+		margin: 0 !important;
+	}
+	body#media_about_us .item-foot-text,
+	body[data-id="70"] .item-foot-text {
+		height: auto !important;
+		line-height: 1 !important;
+	}
+
+
+	.simply-pagination {
+		margin-top: 20px !important;
+	}
+
+
+	#synergy_wallpaper .item {
+		width: auto !important;
+		max-width: 300px;
+		float: none !important;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 15px !important;
+	}
+	#synergy_wallpaper .item a.img {
+		height: auto !important;
+		min-height: 232px;
+	}
+
+
+	.uptl_right.share {
+		margin-left: 10px !important;
+	}
+	.share .uptolike-buttons {
+		position: static !important;
+		margin: 0 0 10px !important;
+	}
+
+
+	[class^="btn-block-"] h1 {
+		font-size: 100% !important;
+	}
+
+
+	.reviews-inner .review-list li {
+		float: none !important;
+		clear: none !important;
+		display: inline-block !important;
+		vertical-align: top;
+		margin: 0 15px 15px 0 !important;
+	}
+
+}
+/* 992px */
+
+
+@media only screen and (max-width: 768px) {
+
+	h1, .h1 {
+		font-size: 6vmin !important;
+	}
+
+	span[style^="white-space"] {
+		white-space: normal !important;
+	}
+
+
+	#footer .phone-admissions-moscow,
+	#header .phone-admissions-moscow {
+		display: none !important;
+	}
+
+
+	.popularProgramm .wrap a {
+		width: 50% !important;
+	}
+	.popularProgramm .wrap a:first-child {
+		height: 120px !important;
+	}
+
+
+	#mainslider .wrapBG {
+		background-position: -160px 0 !important;
+	}
+
+
+	body.main .aboutUniversity {
+		display: none;
+	}
+
+	.aboutUniversity {
+		float: none !important;
+	}
+
+	.au_faq {
+		width: auto !important;
+		position: static !important;
+		margin-top: 30px !important;
+	}
+
+
+	.news {
+		width: auto !important;
+	}
+	.news .itemnews,
+	.news .first {
+		width: auto !important;
+		float: none !important;
+	}
+	.news .first {
+		margin-bottom: 10px !important;
+	}
+	.news .itemnews {
+		margin: 0 !important;
+	}
+	.news h4::after,
+	.news a::after {
+		display: none !important;
+	}
+
+
+	.footer .logo {
+		margin-bottom: 10px;
+	}
+	.footer .logo svg {
+		width: 100% !important;
+	}
+	.footer .search-form {
+		float: right;
+		margin: 0 0 15px;
+	}
+	.footer .phone {
+		clear: right;
+		top: 0;
+	}
+
+
+	.scheldueTable, .scheldueTable thead, .scheldueTable tbody, .scheldueTable tr, .scheldueTable th, .scheldueTable td {
+		display: block;
+	}
+	table.scheldueTable tr.sep,
+	.scheldueTable br {
+		display: none;
+	}
+	.scheldueTable th {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	.scheldueTable tr {
+		border: 1px solid #CCC;
+		border-bottom: 0;
+	}
+	table.scheldueTable td {
+		min-height: 18px;
+		text-align: left;
+		border: none;
+		border-bottom: 1px solid #eee;
+		padding-left: 54%;
+	}
+	.scheldueTable td:before {
+		width: 114%;
+		display: inline-block;
+		position: relative;
+		font-weight: bold;
+		margin-left: -114%;
+	}
+	table.scheldueTable tr.not {
+		color: #BBB !important;
+	}
+	.scheldueTable td.hasDate {
+		color: #686868;
+		font-weight: bold;
+		background: #F3F3F3;
+	}
+	.scheldueTable td:before {
+		content: attr(title);
+	}
+
+	.wrap-legend-table {
+		padding: 10px 15px;
+	}
+	.legend_table.varsity-type {
+		margin-bottom: 0;
+	}
+	.legend_table, .legend_table caption, .legend_table thead, .legend_table tbody, .legend_table tr, .legend_table th, .legend_table td {
+		display: block;
+	}
+	.legend_table td {
+		padding: 5px 0 !important;
+	}
+
+
+	.blueBig span.big > .center {
+		font-size: 150%;
+	}
+
+
+	.levels-edu {
+		height: auto !important;
+		float: none !important;
+		margin-bottom: 0 !important;
+	}
+	.levels-edu .td {
+		min-height: 70px;
+		display: block;
+		text-align: center;
+		line-height: 65px;
+	}
+	.levels-edu .word {
+		display: inline-block;
+		line-height: 1;
+		margin: 0 5px 3px;
+	}
+	.levels-edu-period {
+		line-height: 1;
+		margin: 0 5px !important;
+	}
+	.levels-edu.hasone {
+		width: 100% !important;
+		left: 0 !important;
+	}
+
+
+	.first-icons > div {
+		height: auto !important;
+		border: 0 !important;
+		padding-bottom: 20px;
+	}
+
+
+	.become .bg {
+		padding: 0 15px !important;
+	}
+	.become .bg .salary {
+		padding: 15px !important;
+	}
+
+
+	.incubator .icon .bg {
+		background-size: cover !important;
+	}
+
+
+	.promo-kemworkaut .person .bg {
+		height: auto !important;
+		margin-bottom: 15px !important;
+	}
+
+
+	.volonteer .icon .bg {
+		height: auto !important;
+		background-position: 50% 0 !important;
+		background-size: cover !important;
+	}
+	.volonteer svg {
+		margin-top: 20px !important;
+	}
+
+
+	.pravila_priema img {
+		max-width: 100% !important;
+	}
+
+
+	#content.group iframe {
+		height: 580px !important;
+	}
+
+
+	.intrntnl-frndshp li {
+		overflow: visible !important;
+		margin: 20px 0 50px !important;
+	}
+
+
+	.licenze > div {
+		width: auto !important;
+		float: none !important;
+	}
+	.licenze .right {
+		margin: 50px 0 0 !important;
+	}
+	.licenze h3 {
+		margin: 0 0 20px !important;
+	}
+	.licenze .img a {
+		display: inline-block;
+		float: none !important;
+		margin: 0 13px 20px -13px !important;
+	}
+
+
+	.rectorWrap .right {
+		width: auto !important;
+		float: none !important;
+		clear: both !important;
+	}
+
+
+	.view_branch ul.table li {
+		display: inline-block !important;
+		border: 0 !important;
+		padding: 0 10px 0 0 !important;
+	}
+
+
+	.kaf_detail {
+		padding: 0 15px !important;
+	}
+	.kaf_detail-director-photo {
+		float: none !important;
+	}
+	.kaf_detail-director-info {
+		margin: 20px 0 0 !important;
+	}
+	.kaf_detail-download {
+		text-align: center;
+		white-space: normal !important;
+	}
+	.kaf_pdg-download {
+		margin: 0 10px !important;
+	}
+
+
+	.teacher-staff td {
+		width: auto !important;
+		display: block;
+		padding: 0 !important;
+	}
+	.teacher-staff td:first-child {
+		padding: 0 !important;
+		border: 0 !important;
+	}
+	.teacher-staff td[colspan="2"] {
+		padding-top: 15px !important;
+	}
+
+
+	.top_contakt {
+		height: auto !important;
+	}
+	.top_contakt > p {
+		width: auto !important;
+		float: none !important;
+		left: 0 !important;
+		margin: 0 0 20px !important;
+	}
+	.top_contakt a {
+		position: relative !important;
+		top: 0 !important;
+	}
+	.top_contakt .phone-item {
+		display: block !important;
+		margin: 0 0 5px;
+	}
+	.top_contakt .phone-label {
+		padding-left: 30px;
+	}
+
+
+	.news-item-related {
+		width: auto !important;
+		float: none !important;
+	}
+
+	.content-sort .ik_select {
+		margin: 10px 10px 0 0 !important;
+	}
+	.content-sort .ik_select.tag {
+		width: 100% !important;
+	}
+
+
+	.press_media-center {
+		min-width: 0 !important;
+		padding: 15px !important;
+	}
+	.press_media-center span {
+		width: auto !important;
+		height: auto !important;
+	}
+
+
+	#content.awards .honorItem {
+		width: 30%;
+		float: none !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 3% 20px 0;
+	}
+	#content.awards .clear .honorItem {
+		width: auto !important;
+	}
+	#content.awards .honorItem .img {
+		width: auto !important;
+		height: auto !important;
+	}
+
+
+	.press_last-news .itemnews .date,
+	.press_last-news .itemnews .intro,
+	.press_last-news .itemnews,
+	.press_last-news .first {
+		width: auto !important;
+		float: none !important;
+	}
+	.press_last-news .itemnews .intro {
+		margin: 0 !important;
+	}
+	.press_last-news .itemnews .intro::after,
+	.press_last-news .first h4 a::after {
+		display: none !important;
+	}
+	.itemnews {
+		border-top: 1px solid #E3E3E3;
+		padding-top: 10px !important;
+		margin-top: 10px !important;
+	}
+
+}
+/* 768px */
+
+
+@media (max-width: 600px) {
+
+	#bigGallery .wrapBG .innerBG {
+		width: 395px !important;
+		clear: left;
+	}
+
+	.wrapForm {
+		padding: 0 !important;
+	}
+	.findEdu .form {
+		padding: 15px 5px !important;
+	}
+
+
+	#content.awards .clear .honorItem {
+		padding: 15px;
+	}
+	#content.awards .clear .honorItem p.img {
+		width: auto !important;
+		height: auto !important;
+		float: none !important;
+	}
+	#content.awards .clear .honorItem h3 {
+		margin-top: 10px !important;
+	}
+	#content.awards .clear .honorItem .text {
+		margin: 0 !important;
+	}
+
+
+	[class^="btn-block-"] {
+		height: auto !important;
+		min-height: 63px !important;
+		line-height: 63px !important;
+		padding: 5px 150px 5px 15px !important;
+	}
+	[class^="btn-block-"] .btn {
+		top: 10px !important;
+		right: 0 !important;
+	}
+
+	.hvertical > * {
+		line-height: 1.22 !important;
+	}
+	.hvertical > .btn {
+		line-height: 65px !important;
+	}
+
+}
+/* 600px */
+
+
+@media (max-width: 560px) {
+  .land-crumb {
+  	font-size: 13px;
+  }
+  .block-header__city {
+    float: none;
+  }
+  .map-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 300px;
+  }
+  #sendRequest {
+    width:100%;
+    max-width:100%;
+  }
+  
+  #sendRequest input[type="text"], 
+  #sendRequest2 input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+  }
+ 
+  img {
+    max-width: 100%;
+  }
+  .news-item-content {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .closeOnOuterClick {
+    display:none !important;
+  }
+ 
+	#header .phone-item {
+		text-align: right;
+	}
+
+
+	#mainslider .wrapBG .descr {
+		margin-left: 0 !important;
+	}
+
+	#mainslider .wrapBG {
+		background-position: -360px 0 !important;
+	}
+
+
+	#ourMenu .ik_select,
+	#visually_challenged,
+	#ourMenu .search-form {
+		float: none;
+	}
+	#ourMenu .search-form {
+		margin: 20px 0;
+	}
+
+
+	.popularProgramm .wrap a {
+		width: 100% !important;
+	}
+
+
+	.footer .search-form {
+		float: left;
+		clear: left;
+	}
+	.footer .bottommenu {
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+	.footer .menublock.contact {
+		width: 100%;
+		float: none;
+		clear: both;
+		position: static;
+	}
+	#footer .followUs {
+		width: auto;
+	}
+
+
+	.aboutblock {
+		height: auto !important;
+	}
+	.u_i_n {
+		width: auto !important;
+		float: none !important;
+		text-align: center;
+		background-size: cover;
+		padding: 20px 45px 30px !important;
+	}
+	.u_i_n p {
+		margin: 0 0 15px !important;
+	}
+	.u_i_n > * {
+		position: static !important;
+	}
+	.u_i_n > span {
+		min-width: 150px;
+	}
+	.u_i_n > div > span {
+		margin: 0 50px 30px 0 !important;
+	}
+	.u_i_n .first span.sp3 {
+		padding-left: 35px !important;
+	}
+	.u_i_n .first span.sp3 svg {
+		left: 0 !important;
+	}
+
+
+	.promoFeatures .promoSpecialtyCol {
+		max-width: 100%;
+		padding-right: 0 !important;
+	}
+	.promoFeaturesItem {
+		height: auto !important;
+	}
+	.promoFeaturesItem::before {
+		top: 24px !important;
+		left: 33px !important;
+	}
+	.promoFeaturesItemCaption {
+		padding-top: 130px !important;
+	}
+	.promoFeaturesItem-4 .promoFeaturesItemCaption {
+		padding-top: 160px !important;
+	}
+	#college .promoFeaturesItem-3 .promoFeaturesItemCaption {
+		padding-top: 130px !important;
+	}
+	#college .promoFeaturesItem-4 .promoFeaturesItemCaption {
+		padding-top: 160px !important;
+	}
+	#college .promoFeaturesItem.promoFeaturesItem-2 {
+		background-position: 0 -20px !important;
+	}
+	#magistracy .promoFeaturesItem.promoFeaturesItem-3 {
+		padding-top: 10px !important;
+	}
+	#aspirantura .promoFeaturesItem-2 .promoFeaturesItemCaption {
+		padding-top: 150px !important;
+	}
+
+
+	.block50proc {
+		width: auto !important;
+		float: none !important;
+	}
+
+
+	.promo-halfimgtext {
+		min-height: auto !important;
+	}
+	.promo-halfimgtext .second h3 {
+		font-size: 30px !important;
+	}
+
+
+	.choose-payment .item input {
+		width: 100% !important;
+	}
+	.choose-payment .item .btn {
+		margin: 0 !important;
+	}
+
+
+	.press_announcement .first .date {
+		display: block !important;
+		clear: left !important;
+	}
+
+
+	.press_wp-content-text {
+		font-size: 20px;
+	}
+
+
+	#content.awards .honorItem h3 {
+		font-size: 90% !important;
+	}
+
+
+	[class^="btn-block-"] {
+		font-size: 100% !important;
+	}
+
+
+	.review-info .info,
+	.review-info .img {
+		display: block !important;
+	}
+	.review-info .img {
+		height: 413px !important;
+	}
+	.review-info .info {
+		padding: 15px 15px 0 !important;
+	}
+	.review-info .position {
+		padding-bottom: 10px !important;
+	}
+	.review-info .share {
+		position: static !important;
+		vertical-align: top !important;
+		margin: 10px 0 0 !important;
+	}
+
+}
+/* 560px */
+
+
+@media (max-width: 405px) {
+
+	h1, .h1 {
+		font-size: 8vmin !important;
+	}
+	h3 {
+		font-size: 8vmin !important;
+		line-height: 1.1 !important;
+	}
+
+	#header .phone-item {
+		margin-left: 0 !important;
+	}
+
+
+	#ourMenu .menublock.contact > div {
+		border: 0;
+	}
+
+
+	.footer .search-form {
+		max-width: 40%;
+		position: relative;
+	}
+	.footer .search-form .search {
+		width: 100% !important;
+		box-sizing: border-box;
+		padding-right: 40px;
+	}
+	.footer .search-form .utilityButton {
+		position: absolute;
+		top: 5px;
+	}
+
+	.footer .phone {
+		padding: 0;
+	}
+
+	.footer .bottommenu {
+		margin-top: 20px;
+	}
+	.footer .menublock {
+		width: 100%;
+		margin-top: 0 !important;
+	}
+	.footer .menublock .level1 {
+		margin-top: 15px;
+	}
+
+
+	#bigGallery .wrapBG .innerBG {
+		width: 300px !important;
+		clear: left;
+	}
+	#bigGallery .item {
+		width: 130px !important;
+		height: auto !important;
+	}
+	#bigGallery .item.big {
+		width: 280px !important;
+	}
+
+
+	.form .h3 {
+		width: auto !important;
+	}
+	.form p {
+		display: block !important;
+	}
+	.form input {
+		width: 100% !important;
+	}
+
+
+	.tab-links .td {
+		display: block !important;
+	}
+	.tab-links .tab {
+		width: auto !important;
+		margin-left: 0 !important;
+	}
+
+
+	.u_i_n > span,
+	.u_i_n > a {
+		margin: 10px !important;
+	}
+	.aboutUniversity .playvideo {
+		margin-left: -20px !important;
+	}
+
+
+	.top h2 {
+		font-size: 120% !important;
+		line-height: 1.25 !important;
+	}
+
+
+	.promotext .text {
+		font-size: 1.5em !important;
+	}
+
+	.promo-halfimgtext .second .hasafter li {
+		padding-top: 70px !important;
+		padding-left: 20px !important;
+	}
+
+
+	#masterClass h3 {
+		font-size: 30px !important;
+	}
+	#masterClass .person .bg {
+		padding: 15px 0 !important;
+	}
+
+	.teacher .person h4 {
+		font-size: 1.5em !important;
+	}
+
+
+	.promoSpecialtyCol {
+		padding-right: 0 !important;
+	}
+
+	.campus .icon .bg {
+		height: auto !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.campus .descr {
+		font-size: 1.3em !important;
+	}
+
+
+	.promowhy .runslider > div {
+		font-size: 18px !important;
+	}
+
+
+	.reviews .review .name {
+		font-size: 11px !important;
+	}
+
+
+	.faq-content .item .toggle {
+		padding-left: 0 !important;
+	}
+
+	.syllabus .toggle_id {
+		font-size: 16px !important;
+	}
+
+
+	.head_descr .big {
+		font-size: 1.2em !important;
+	}
+
+
+	ul.konkurs_u4sovet {
+		font-size: 0.9em !important;
+	}
+
+
+	#supervisoryul li {
+		padding: 20px 0 !important;
+	}
+	#supervisoryul li::before {
+		display: block;
+		position: static !important;
+	}
+	#supervisoryul li h4,
+	#supervisoryul li p {
+		margin-left: 0 !important;
+	}
+
+
+	.top_contakt .phone-label {
+		display: block;
+	}
+
+
+	.press_wp {
+		background-position: 100% 0 !important;
+		background-size: auto !important;
+	}
+	.press_wp-content {
+		padding: 20px !important;
+	}
+
+	#content.awards .honorItem h3 {
+		font-size: 80% !important;
+	}
+
+
+	#synergy_wallpaper .item {
+		margin-right: 0 !important;
+	}
+
+
+	.hvertical::after {
+		display: none;
+	}
+
+}
+/* 405px */
+
+
+@media (max-width: 319px) {
+
+	#header .phone-students {
+		margin-left: 20px !important;
+	}
+
+}
+/* 320px */

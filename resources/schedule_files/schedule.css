@@ -1,0 +1,409 @@
+/*Schedule*/
+#content.schedule .tabs {
+		border-bottom: 1px solid #cbcccc;
+		width: 100%;
+		clear: both;
+		float: left;
+		margin: 5px 0px 20px;
+	}
+		#content.schedule .tabs a {
+			display: block;
+			float: left;
+			min-width: 138px;
+			text-align: center;
+			margin:  0 2px -1px 0;
+			padding: 10px 12px 8px;
+			border: 1px solid #cbcccc;
+			color: #6f6f6f;
+			font-size: 14px;
+			line-height: 20px;
+			background: url('../img/gradientLink.jpg') repeat-x;
+		}
+		#content.schedule .tabs a.red {
+			background: #fff;
+			border-bottom-color: #fff;
+		}
+	#content.schedule .params {
+		border: 1px solid #cbcccc;
+		overflow: hidden;
+		height: 28px;
+		padding: 5px 6px;
+		font-size: 14px;
+		clear: both;
+	}
+		#content.schedule .params .category {
+			width: 385px;
+			float: left;
+			padding: 5px;
+		}
+			#content.schedule .params .category span, .sheduleSelectWrap span.who {
+				text-transform: uppercase;
+				float: left;
+				font-size: 16px;
+				font-weight: 400;
+			}
+			#content.schedule .params .category label {
+				margin: 0px 4px;
+				float: left;
+				line-height: 16px;
+			}
+				#content.schedule .params .category input[type="radio"] {
+					float: left;
+					margin: 1px 8px;
+				}
+	#content.schedule .sheduleSelectWrap {
+		width: 505px;
+		height: 28px;
+		padding: 10px 15px 0;
+		float: left;
+		border-left: 1px solid #cbcccc;
+		position: absolute;
+		top: 66px;
+		right: 0px;
+	}
+		#content.schedule .ik_select.sheduleSelect {
+			top: -6px;
+			width: 218px;
+			float: right;
+			margin: 0 -5px;
+			right: -5px;
+		}
+		#content.schedule .ik_select.sheduleSelect:before {
+			background-position: -358px -152px;
+			height: 7px;
+			width: 10px;
+			top: 12px;
+		}
+			#content.schedule .ik_select.sheduleSelect .ik_select_link {
+				padding: 8px 40px 8px 14px;
+				font-style: italic;
+			}
+		#schedule .sheduleSelectWrap .ik_select_filter_wrap {
+			float: right;
+			position: relative;
+			margin: -6px 5px 0;
+		}
+		#schedule .sheduleSelectWrap .ik_select_filter_wrap:after {
+			content: '';
+			display: block;
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			right: 6px;
+			top: 10px;
+			background: url('../img/sprite.png') no-repeat -371px -148px;
+		}
+			#schedule .sheduleSelectWrap input.ik_select_filter {
+				width: 208px !important;
+				float: right;
+				padding: 6px 5px;
+				border: 1px solid #cbcccc;
+				background: url('../img/input_bg.png') repeat-x 0 0;
+				margin: 0;
+			}
+
+	.result {
+
+	}
+		.result h4 {
+			color: #4099ff;
+			font-size: 30px;
+			font-weight: 500;
+			line-height: 28px;
+			margin: 36px 0 36px;
+			float: none;
+		}
+		.result h5 {
+			text-transform: uppercase;
+			font-size: 16px;
+			font-weight: 500;
+			color: #5a5a5a;
+			margin-bottom: 30px;
+		}
+		.result p {
+			color: #ea2526;
+			margin-bottom: 56px;
+			letter-spacing: 1px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+
+	table.scheldueTable {
+		border: 0px solid #cbcccc;
+		width: 100%;
+		margin-bottom: 80px;
+	}
+		table.scheldueTable th {
+			background: #f3f3f3;
+	    border: 1px solid #f3f3f3;
+	    font-weight: 700;
+	    text-align: left;
+	    color: #686868;
+	    padding: 12px 6px;
+	    vertical-align: middle;
+		}
+		table.scheldueTable th.schedule-subgroup,
+		table.scheldueTable th.schedule-type,
+		table.scheldueTable th.schedule-bldg,
+		table.scheldueTable th.schedule-hall {
+			text-align: center;
+		}
+		table.scheldueTable th.schedule-date,
+		table.scheldueTable td.hasDate {
+			padding-left: 24px;
+			text-align: left;
+			width: 100px;
+		}
+		table.scheldueTable th.schedule-type {
+			width: 75px;
+		}
+		table.scheldueTable th.schedule-dis {
+			width: 200px;
+		}
+		table.scheldueTable th.schedule-lector {
+			width: 140px;
+		}
+		table.scheldueTable tr.not {
+			color: #bbb;
+	    font-weight: 500;
+	    font-size: 14px;
+		}
+		table.scheldueTable tr.sep {
+			border: 1px solid #fff;
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+		table.scheldueTable tr.wrapTr {
+			/*border-top: 3px solid #999;*/
+			font-size: 14px;
+		}
+		table.scheldueTable tbody tr {
+			transition: background .3s ease 0s;
+			-o-transition: background .3s ease 0s;
+			-moz-transition: background .3s ease 0s;
+			-webkit-transition: background .3s ease 0s;
+		}
+		table.scheldueTable tbody tr:hover {
+			background: #f9f9f9;
+		}
+		table.scheldueTable td {
+			border: none;
+			border-bottom: 1px solid #f3f3f3;
+			padding: 12px 6px;
+			text-align: center;
+		}
+		table.scheldueTable td.text-left {
+			text-align: left;
+		}
+		table.scheldueTable td.schedule-bldg span,
+		table.scheldueTable td.schedule-type span {
+			position: relative;
+			cursor: default;
+		}
+			table.scheldueTable td.schedule-bldg i,
+			table.scheldueTable td.schedule-type i {
+				display: block;
+				opacity: 0;
+				position: absolute;
+				z-index: -1;
+				left: 50%;
+				bottom: 120%;
+		    background: rgba(104,104,104,.9);
+		    font-size: 14px;
+		    color: #fff;
+		    padding: 7px 20px 5px 10px;
+			}
+			table.scheldueTable td.schedule-bldg i:after,
+			table.scheldueTable td.schedule-type i:after {
+				content: '';
+		    display: block;
+		    width: 0px;
+		    border-top: 6px solid rgba(104,104,104,.9);
+		    border-right: 6px solid transparent;
+		    position: absolute;
+		    top: 100%;
+		    left: 0;
+			}
+			table.scheldueTable td.schedule-bldg i.revert,
+			table.scheldueTable td.schedule-type i.revert {
+				left: auto;
+				right: 50%;
+			}
+			table.scheldueTable td.schedule-bldg i.revert:after,
+			table.scheldueTable td.schedule-type i.revert:after {
+				left: auto;
+				right: 0;
+				border-left: 6px solid transparent;
+				border-right: none;
+			}
+			table.scheldueTable td.schedule-bldg:hover i,
+			table.scheldueTable td.schedule-type:hover i {
+				display: block;
+				opacity: 1;
+				z-index: 1;
+			}
+		table.scheldueTable td > * {
+			white-space: normal !important;
+		}
+	.legend_table {
+		font-size: 0.9em;
+		border: none;
+		table-layout: fixed;
+		margin-bottom: 10px;
+		/*background: #CCC;*/
+	}
+		.legend_table caption {
+			font-size: 14px;
+	    text-align: left;
+	    font-weight: 800;
+	   /* padding: 34px 38px 44px;*/
+	    color: #4099ff;
+	    text-transform: uppercase;
+			/*background: #CCC;*/
+		}
+		.wrap-legend-table {
+			padding: 34px 38px 44px;
+		}
+		.legend_table td {
+			padding: 30px 0px 0 30px;
+			border: none;
+			vertical-align: top;
+		}
+		.legend_table td:first-child {
+			padding-left: 0;
+		}
+			.legend_table p {
+				margin: 0 0 10px 0;
+				display: table;
+			}
+				.legend_table p > * {
+					display: table-cell;
+					vertical-align: top;
+				}
+				table.legend_table strong {
+					font-weight: 800;
+					display: inline-block;
+					min-width: 30px;
+				}
+		.wrap-legend-table {
+			border: 3px solid #f3f3f3;;
+		}
+		.wrap-legend-table i {
+			padding: 0 4px;
+		}
+
+
+
+/* Стиль для печати */
+@media print {
+	@page {
+		size: portrait;
+	}
+	* {
+		color: black !important;
+		background: white !important;
+		background: transparent !important;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		-webkit-print-color-adjust: exact;
+	}
+	a {
+		cursor: default;
+		text-decoration: none;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		min-width: 0px;
+		height: auto;
+		float: none;
+		background: white;
+		overflow: auto;
+	}
+
+	.inner {
+		width: 100%;
+		max-width: 100%;
+	}
+	#middle {
+		padding: 0;
+		height: auto;
+	}
+
+	.f3 {
+		background: none !important;
+	}
+
+	.menuHeader,
+	.footer,
+	.crumb,
+	.tabs,
+	.params,
+	.sheduleSelectWrap,
+	.wrap_seo-text,
+	#scroll_top,
+	#adminpanel,
+	.banner-link,
+	.closeOnOuterClick,
+	.visually_challenged,
+	.icon-print,
+	#entrance-mobile {
+		display: none !important;
+	}
+
+	.header .logo {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.phone {
+		color: black !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.svedeniya {
+		text-decoration: none !important;
+	}
+
+	h1 {
+		padding: 0 !important;
+		margin: 2em 0 0;
+		background: none;
+	}
+
+	.result p {
+		margin-bottom: 1em;
+	}
+
+	table {
+		margin-top: 1em;
+		width: 100% !important;
+		font-size: 14px !important;
+	  font-family: Arial, sans-serif;
+	}
+
+	tr.wrapTr {
+		border-top: 2px solid black;
+		font-size: 14px !important;
+	}
+
+	/*tr.not {
+		display: none !important;
+	}*/
+	td, th {
+		padding: 2pt !important;
+	}
+	table.scheldueTable th {
+		font-weight: 500;
+		font-size: 9pt !important;
+	}
+
+	.wrap-legend-tabe {
+		page-break-before: always;
+	}
+}
