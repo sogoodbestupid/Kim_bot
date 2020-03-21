@@ -4,8 +4,9 @@
 import telebot
 import variables as v
 import TG_bot_buttons as Tg
-import datetime
-import openpyxl as xl
+from bs4 import BeautifulSoup as BtSp
+from selenium import webdriver
+import re
 
 bot = telebot.TeleBot(v.TOKEN)
 
@@ -19,13 +20,13 @@ def bot_say_hi(message):
     elif message.text == 'Ким':
         skills(message)
     elif message.text == 'Расписание':
-        bot.send_message(message.from_user.id, "Выбери день: ", reply_markup=Tg.button2)
+        bot.send_message(message.from_user.id, "Выбери группу: ", reply_markup=Tg.button2)
     elif message.text == 'Материалы':
         bot.send_message(message.from_user.id, 'Доступные дисциплины: ', reply_markup=Tg.button3)
-    elif message.text == 'Пары сегодня':
-        schedule_getter_today(v.schedule_source_home, message)
-    elif message.text == 'Пары завтра':
-        schedule_getter_tomorrow(v.schedule_source_home, message)
+    elif message.text == 'СБИ-211':
+        schedule_day_get(v.schedule_link_211, message)
+    elif message.text == 'СБИ-212':
+        schedule_day_get(v.schedule_link_212, message)
     elif message.text == v.disciplines[0]:
         bot.send_message(message.from_user.id, v.info_com_sys_net)
     elif message.text == v.disciplines[1]:
@@ -52,40 +53,18 @@ def bot_say_hi(message):
         bot.send_message(message.from_user.id, 'Отправь мне "Ким"!')
 
 
-def schedule_getter_today(source, message):
-    result = list()
-    data = xl.load_workbook(source)
-    sheet = data.get_sheet_by_name('Лист1')
-    sht = sheet
-    datetd = datetime.date.today()
-    today = datetd.strftime('%Y-%m-%d') + ' ' + '00:00:00'
-    for i in sht:
-        day = str(i[0].value)
-        if day == today:
-            for j in i:
-                result.append(str(j.value))
-                return schedule(result, message)
-        else:
-            bot.send_message(message.from_user.id, 'Пар сегодня нет')
-
-
-def schedule_getter_tomorrow(source, message):
-    result = list()
-    data = xl.load_workbook(source)
-    sheet = data.get_sheet_by_name('Лист1')
-    sht = sheet
-    datetd = datetime.date.today()
-    datetm = datetd + datetime.timedelta(days=1)
-    tomorrow = datetm.strftime('%Y-%m-%d') + ' ' + '00:00:00'
-    for i in sht:
-        day = str(i[0].value)
-        if day == tomorrow:
-            for j in i:
-                result.append(str(j.value))
-                return schedule(result, message)
-        else:
-            bot.send_message(message.from_user.id, 'Пар завтра нет!')
-            break
+def schedule_day_get(link, message):
+    obj = ''
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    browser = webdriver.Chrome(executable_path=v.browser_driver, chrome_options=options)
+    browser.get(link)
+    data = browser.page_source
+    soup = BtSp(data, 'html5lib')
+    for i in soup.find_all(attrs={'class': 'today'}):
+        obj = i.text
+    dat = re.sub('[\t\r\n]', ' ', obj)
+    schedule(dat, message)
 
 
 @bot.message_handler(content_types=['text'])
@@ -98,8 +77,7 @@ def skills(message):
 
 @bot.message_handler(content_types=['text'])
 def schedule(les, message):
-    dat = ' '.join(les)
-    bot.send_message(message.from_user.id, dat)
+    return bot.send_message(message.from_user.id, les)
 
 
 bot.polling(none_stop=True, interval=0)

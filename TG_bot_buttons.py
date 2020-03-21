@@ -8,7 +8,7 @@ button1 = types.ReplyKeyboardMarkup()
 button1.row('Расписание', 'Материалы')
 
 button2 = types.ReplyKeyboardMarkup()
-button2.row('Пары сегодня', 'Пары завтра')
+button2.row('СБИ-211', 'СБИ-212')
 
 but1 = types.KeyboardButton(disciplines[0])
 but2 = types.KeyboardButton(disciplines[1])
