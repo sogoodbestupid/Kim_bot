@@ -19,6 +19,7 @@ disciplines = [
     'Практика'
 ]
 
+
 info_com_sys_net = ''  # path_to_remote_directory
 big_data = ''    # path_to_remote_directory
 modeling_system = ''     # path_to_remote_directory
@@ -32,8 +33,7 @@ prog_app_sred_inf_bez = ''    # path_to_remote_directory
 practice = ''      # path_to_remote_directory
 
 
-schedule_link_212 = ""  # link_to_CBI-212_schedule_page
-schedule_link_211 = ""  # link_to_CBI-211_schedule_page
+syn_link = 'https://synergy.ru'
 browser_driver = ""  # path_to_chrome_driver
 day_obj = ''
 

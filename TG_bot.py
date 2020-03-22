@@ -24,9 +24,9 @@ def bot_say_hi(message):
     elif message.text == 'Материалы':
         bot.send_message(message.from_user.id, 'Доступные дисциплины: ', reply_markup=Tg.button3)
     elif message.text == 'СБИ-211':
-        schedule_day_get(v.schedule_link_211, message)
+        get_link(v.syn_link, message.text, message)
     elif message.text == 'СБИ-212':
-        schedule_day_get(v.schedule_link_212, message)
+        get_link(v.syn_link, message.text, message)
     elif message.text == v.disciplines[0]:
         bot.send_message(message.from_user.id, v.info_com_sys_net)
     elif message.text == v.disciplines[1]:
@@ -51,6 +51,21 @@ def bot_say_hi(message):
         bot.send_message(message.from_user.id, v.practice)
     else:
         bot.send_message(message.from_user.id, 'Отправь мне "Ким"!')
+
+
+def get_link(link, group, message):
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    browser = webdriver.Chrome(executable_path=v.browser_driver, chrome_options=options)
+    browser.get("https://synergy.ru/students/schedule")
+    data = browser.page_source
+    soup = BtSp(data, 'html5lib')
+    source = soup.find(attrs={'id': 'scheduleSelect'})
+    option = source.find_all_next('option')
+    for i in option:
+        if group in i:
+            result = link + i['value']
+            return schedule_day_get(result, message)
 
 
 def schedule_day_get(link, message):
