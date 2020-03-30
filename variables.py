@@ -33,13 +33,8 @@ prog_app_sred_inf_bez = ''    # path_to_remote_directory
 practice = ''      # path_to_remote_directory
 
 
+syn_sch = "https://synergy.ru/students/schedule"
 syn_link = 'https://synergy.ru'
-browser_driver = ""  # path_to_chrome_driver
-day_obj = ''
-
-user_agent = {
-    'User-Agent': 'Mozilla/5.0'
-}
 
 teacher_email = {
     'Максимов К.В.': '',

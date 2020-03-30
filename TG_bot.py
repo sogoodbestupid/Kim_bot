@@ -5,8 +5,8 @@ import telebot
 import variables as v
 import TG_bot_buttons as Tg
 from bs4 import BeautifulSoup as BtSp
-from selenium import webdriver
 import re
+from urllib.request import urlopen
 
 bot = telebot.TeleBot(v.TOKEN)
 
@@ -17,7 +17,7 @@ def bot_say_hi(message):
         bot.send_message(message.from_user.id, "Привет, меня зовут Ким! Отправь мне 'Ким' если ты хочешь разобраться "
                                                "в моих навыках")
         bot.register_next_step_handler(message, skills)
-    elif message.text == 'Ким':
+    elif message.text == 'Ким' or message.text == 'ким':
         skills(message)
     elif message.text == 'Расписание':
         bot.send_message(message.from_user.id, "Выбери группу: ", reply_markup=Tg.button2)
@@ -53,38 +53,23 @@ def bot_say_hi(message):
         bot.send_message(message.from_user.id, 'Отправь мне "Ким"!')
 
 
-def get_link(link, group, message):
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    browser = webdriver.Chrome(executable_path=v.browser_driver, chrome_options=options)
-    browser.get("https://synergy.ru/students/schedule")
-    data = browser.page_source
-    soup = BtSp(data, 'html5lib')
+def get_link(lnk, group, message):
+    obj = ''
+    soup = BtSp(urlopen("https://synergy.ru/students/schedule").read().decode('utf-8'), 'html5lib')
     source = soup.find(attrs={'id': 'scheduleSelect'})
     option = source.find_all_next('option')
     for i in option:
         if group in i:
-            result = link + i['value']
-            return schedule_day_get(result, message)
-
-
-def schedule_day_get(link, message):
-    obj = ''
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    browser = webdriver.Chrome(executable_path=v.browser_driver, chrome_options=options)
-    browser.get(link)
-    data = browser.page_source
-    soup = BtSp(data, 'html5lib')
-    for i in soup.find_all(attrs={'class': 'today'}):
-        obj = i.text
-    dat = re.sub('[\t\r\n]', ' ', obj)
-    schedule(dat, message)
+            soup2 = BtSp(urlopen(lnk + i['value']).read().decode('utf-8'), 'html5lib')
+            for j in soup2.find_all(attrs={'class': 'today'}):
+                obj = j.text
+            reg = re.sub('[\t\r\n]', ' ', obj)
+            return schedule(reg, message)
 
 
 @bot.message_handler(content_types=['text'])
 def skills(message):
-    if message.text == 'Ким':
+    if message.text == 'Ким' or message.text == 'ким':
         bot.send_message(message.from_user.id, 'Ок, вот что я могу: ', reply_markup=Tg.button1)
     else:
         bot.send_message(message.from_user.id, 'Я сообщу разработчику!')
