@@ -23,34 +23,12 @@ def bot_say_hi(message):
         bot.send_message(message.from_user.id, "Выбери группу: ", reply_markup=Tg.button2)
     elif message.text == 'Материалы':
         bot.send_message(message.from_user.id, 'Доступные дисциплины: ', reply_markup=Tg.button3)
-    elif message.text == 'СБИ-211':
-        get_link(v.syn_link, message.text, message)
-    elif message.text == 'СБИ-212':
-        get_link(v.syn_link, message.text, message)
-    elif message.text == v.disciplines[0]:
-        bot.send_message(message.from_user.id, v.info_com_sys_net)
-    elif message.text == v.disciplines[1]:
-        bot.send_message(message.from_user.id, v.big_data)
-    elif message.text == v.disciplines[2]:
-        bot.send_message(message.from_user.id, v.modeling_system)
-    elif message.text == v.disciplines[3]:
-        bot.send_message(message.from_user.id, v.graph_3d)
-    elif message.text == v.disciplines[4]:
-        bot.send_message(message.from_user.id, v.mispisit)
-    elif message.text == v.disciplines[5]:
-        bot.send_message(message.from_user.id, v.time_managment)
-    elif message.text == v.disciplines[6]:
-        bot.send_message(message.from_user.id, v.mobile_device_dev_tech)
-    elif message.text == v.disciplines[7]:
-        bot.send_message(message.from_user.id, v.mob_dev_net_comp_framework)
-    elif message.text == v.disciplines[8]:
-        bot.send_message(message.from_user.id, v.osn_isp_1c_predp)
-    elif message.text == v.disciplines[9]:
-        bot.send_message(message.from_user.id, v.prog_app_sred_inf_bez)
-    elif message.text == v.disciplines[10]:
-        bot.send_message(message.from_user.id, v.practice)
-    else:
-        bot.send_message(message.from_user.id, 'Отправь мне "Ким"!')
+    for j in v.groups:
+        if j == message.text:
+            get_link(v.syn_link, message.text, message)
+    for i in v.discipline:
+        if i == message.text:
+            bot.send_message(message.from_user.id, v.discipline[message.text])
 
 
 def get_link(lnk, group, message):
