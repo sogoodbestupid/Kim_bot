@@ -5,6 +5,8 @@ DROP_BOX_TOKEN = ''
 
 TOKEN = ''   # telegram_token
 
+skills = ['Расписание', 'Материалы']
+
 groups = ['СБИ-211', 'СБИ-212']
 
 discipline = {'Инфокоммуникационные системы и сети':
@@ -25,7 +27,12 @@ discipline = {'Инфокоммуникационные системы и сет
               'https://www.dropbox.com/sh/5acc1ywp0ljw0q7/AACmCS--ElcRFjWqtBa2PqxRa?dl=0',
               'Осн. Исп. и Конф. 1С Предприятие':
               'https://www.dropbox.com/sh/1fu8ys5vbgf27qn/AAC22e57yp19PvORpTgYcAQqa?dl=0',
+              'Прог. и Апп. Средства Инф. Без.':
+              'https://www.dropbox.com/sh/wd6dpwhuhxovkhz/AABMaBTlsza31zYth-fq8Jo_a?dl=0',
+              'Практика':
+              'https://www.dropbox.com/sh/k2g5orrvqbiatba/AAB_KEUYQ0M_RZfzv7TY5_v_a?dl=0'
               }
+disc_keys = list(discipline.keys())
 
 syn_sch = "https://synergy.ru/students/schedule"
 syn_link = 'https://synergy.ru'

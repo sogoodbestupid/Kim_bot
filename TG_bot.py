@@ -47,10 +47,7 @@ def get_link(lnk, group, message):
 
 @bot.message_handler(content_types=['text'])
 def skills(message):
-    if message.text == 'Ким' or message.text == 'ким':
-        bot.send_message(message.from_user.id, 'Ок, вот что я могу: ', reply_markup=Tg.button1)
-    else:
-        bot.send_message(message.from_user.id, 'Я сообщу разработчику!')
+    return bot.send_message(message.from_user.id, 'Ок, вот что я могу: ', reply_markup=Tg.button1)
 
 
 @bot.message_handler(content_types=['text'])
