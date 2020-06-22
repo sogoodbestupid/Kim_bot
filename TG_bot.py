@@ -16,7 +16,6 @@ def bot_say_hi(message):
     if message.text == 'Привет' or message.text == '/start':
         bot.send_message(message.from_user.id, "Привет, меня зовут Ким! Отправь мне 'Ким' если ты хочешь разобраться "
                                                "в моих навыках")
-        bot.register_next_step_handler(message, skills)
     elif message.text == 'Ким' or message.text == 'ким':
         skills(message)
     elif message.text == 'Расписание':
@@ -55,4 +54,4 @@ def schedule(les, message):
     return bot.send_message(message.from_user.id, les)
 
 
-bot.polling(none_stop=True, interval=0)
+bot.infinity_polling()

@@ -3,24 +3,18 @@
 
 from telebot import types
 from variables import disc_keys as dk
+from variables import groups as g
+from variables import skills as sk
 
-button1 = types.ReplyKeyboardMarkup()
-button1.row('Расписание', 'Материалы')
+button1 = types.ReplyKeyboardMarkup(resize_keyboard=True)
+for i in sk:
+    button1.row(i)
 
-button2 = types.ReplyKeyboardMarkup()
-button2.row('СБИ-211', 'СБИ-212')
+button2 = types.ReplyKeyboardMarkup(resize_keyboard=True)
+for j in g:
+    button2.row(j)
 
-but1 = types.KeyboardButton(dk[0])
-but2 = types.KeyboardButton(dk[1])
-but3 = types.KeyboardButton(dk[2])
-but4 = types.KeyboardButton(dk[3])
-but5 = types.KeyboardButton(dk[4])
-but6 = types.KeyboardButton(dk[5])
-but7 = types.KeyboardButton(dk[6])
-but8 = types.KeyboardButton(dk[7])
-but9 = types.KeyboardButton(dk[8])
-but10 = types.KeyboardButton(dk[9])
-but11 = types.KeyboardButton(dk[10])
-button3 = types.ReplyKeyboardMarkup()
-button3.add(but1, but2, but3, but4, but5, but6, but7, but8, but9, but10, but11)
+button3 = types.ReplyKeyboardMarkup(resize_keyboard=True)
+for k in dk:
+    button3.row(k)
 
