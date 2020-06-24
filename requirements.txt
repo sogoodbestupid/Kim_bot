@@ -1,0 +1,3 @@
+urllib
+pyTelegramBotAPI
+beautifulsoup4
