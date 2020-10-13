@@ -3,12 +3,13 @@
 
 DROP_BOX_TOKEN = ''
 
-TOKEN = ''   # telegram_token
+TOKEN = ''  # telegram_token
 
 skills = ['Расписание', 'Материалы']
 
-groups = ['СБИ-211', 'СБИ-212']
+schedules = ['Студент', 'Преподаватель']
 
+groups = ['СБИ-311', 'СБИ-312']
 
 discipline = {'Инфокоммуникационные системы и сети':
               'link to resource',
@@ -35,17 +36,16 @@ discipline = {'Инфокоммуникационные системы и сет
               }
 disc_keys = list(discipline.keys())
 
-syn_sch = "https://synergy.ru/students/schedule"
 syn_link = 'https://synergy.ru'
 
-teacher_email = {
-    'Максимов К.В.': '',
-    'Гавриленко А.В.': '',
-    'Ребус Н.А.': '',
-    'Кудинов А.А.': '',
-    'Прокимнов Н.Н': '',
-    'Дьяконова И.А': '',
-    'Ожередов В.А.': '',
-    'Гнибеда А.Ю.': '',
-    'Смелкова И.А.': ''
-}
+teachers = [
+    'Максимов Константин Викторович',
+    'Гавриленко Андрей Васильевич',
+    'Ребус Наталья Анатольевна',
+    'Прокимнов Николай Николаевич',
+    'Ожередов Вадим Андреевич',
+    'Гнибеда Артем Юрьевич'
+]
+
+stud_mode = '/students/schedule'
+teach_mode = '/students/schedule?view_mode=teacher'
